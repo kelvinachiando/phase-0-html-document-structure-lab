@@ -60,6 +60,7 @@ describe("index.html", () => {
     it("has a <link> tag that links to an external stylesheet", () => {
       // find a <link> tag within the <head> tag
       const link = document.querySelector("head > link");
+      console.log('Here ',link);
 
       const hint1 = "No <link> tag found in the <head>";
       expect(link, hint1).to.exist;
@@ -92,6 +93,7 @@ describe("index.html", () => {
         },
       });
       const report = validator.validateString(html);
+      console.log(report);
 
       let errorReport;
       if (report.results.length > 0) {
